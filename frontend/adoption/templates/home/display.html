@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet List</title>
+    <link rel="stylesheet" href="{% static 'home/css/display.css' %}">
+</head>
+<body>
+<!-- All Pets -->
+
+<h1>Pet List</h1>
+<!-- <div id="pet-list"></div>  -->
+
+<!-- Search Pets by Breed -->
+
+<div class="search-container">
+    <label for="breed-search">Search by Breed:</label>
+    <div class="input-container">
+        <input type="text" id="breed-search" placeholder="Enter breed">
+    </div>
+    <button id="search-button">Search</button>
+</div>
+<div class="search-container">
+    <div id="search-display"></div>
+</div>
+
+<!-- Add Pet -->
+
+<div class="add-pet-form">
+    <h2>Add a New Pet</h2>
+    <form id="add-pet-form">
+        <div class="input-container">
+            <label for="add-breed">Breed:</label>
+            <input type="text" id="add-breed" name="breed" required>
+        </div>
+        <div class="input-container">
+            <label for="add-gender">Gender:</label>
+            <input type="text" id="add-gender" name="gender" required>
+        </div>
+        <div class="input-container">
+            <label for="add-age">Age:</label>
+            <input type="text" id="add-age" name="age" required>
+        </div>
+        <div class="input-container">
+            <label for="add-description">Description:</label>
+            <input type="text" id="add-description" name="description" required>
+        </div>
+        <button type="submit">Add Pet</button>
+    </form>
+    <div id="message"></div>
+</div>
+
+<!-- Update Pet -->
+
+<div class="update-pet-form">
+    <h2>Update Pet</h2>
+    <form id="update-pet-form">
+        <div class="input-container">
+            <label for="update-pet-id">Pet ID:</label>
+            <input type="text" id="update-pet-id" name="pet-id" required>
+        </div>
+        <div class="input-container">
+            <label for="update-breed">Breed:</label>
+            <input type="text" id="update-breed" name="breed" required>
+        </div>
+        <div class="input-container">
+            <label for="update-gender">Gender:</label>
+            <input type="text" id="update-gender" name="gender" required>
+        </div>
+        <div class="input-container">
+            <label for="update-age">Age:</label>
+            <input type="text" id="update-age" name="age" required>
+        </div>
+        <div class="input-container">
+            <label for="update-description">Description:</label>
+            <input type="text" id="update-description" name="description" required>
+        </div>
+        <div class="input-container">
+            <label for="update-is-adopted">Is Adopted:</label>
+            <input type="checkbox" id="update-is-adopted" name="is-adopted">
+        </div>
+        <button type="submit">Update Pet</button>
+    </form>
+    <div id="update-message"></div>
+</div>
+
+<!-- Delete Pet -->
+
+<div class="delete-pet-form">
+    <h2>Delete Pet</h2>
+    <form id="delete-pet-form">
+        <div class="input-container">
+            <label for="delete-pet-id">Enter Pet ID to Delete:</label>
+            <input type="text" id="delete-pet-id" name="delete-pet-id" required>
+        </div>
+        <button type="submit">Delete Pet</button>
+    </form>
+    <div id="delete-message"></div>
+</div>
+
+<script src="{% static 'home/scripts/allpets.js' %}"></script>
+<script src="{% static 'home/scripts/searchPets.js' %}"></script>
+<script src="{% static 'home/scripts/createPets.js' %}"></script>
+<script src="{% static 'home/scripts/updatePets.js' %}"></script>
+<script src="{% static 'home/scripts/deletePets.js' %}"></script>
+</body>
+</html>
